@@ -48,7 +48,7 @@ const fetchAPI = (path, options) => {
 };
 
 const API = {
-  getShorten: (linkItem) => { return fetchAPI(URI.bitlinks, option(Method.POST, linkItem)); },
+  getShorten: (linkItem) => fetchAPI(URI.bitlinks, option(Method.POST, linkItem)),
 };
 
 export default API;
