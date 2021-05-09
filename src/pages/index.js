@@ -3,10 +3,11 @@ import AppLayout from '../components/Layouts';
 import LinkInput from '../components/LinkInput';
 import LinkList from '../components/LinkList';
 import { fetchAPI } from '../utils/event';
-import { getStorage, setStorage } from '../utils/storage';
+import Storage from '../utils/storage';
 
 const Home = () => {
-  const [fetchLinks, setFetchLinks] = useState(getStorage() || []);
+  const storage = new Storage();
+  const [fetchLinks, setFetchLinks] = useState(storage.get() || []);
   const [transformLink, setTransformLink] = useState();
   const inputRef = useRef();
 
@@ -44,7 +45,7 @@ const Home = () => {
   }, [transformLink]);
 
   useEffect(() => {
-    setStorage('links', fetchLinks);
+    storage.set('links', fetchLinks);
   }, [fetchLinks])
   
   return (
