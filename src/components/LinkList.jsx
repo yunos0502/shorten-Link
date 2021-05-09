@@ -6,6 +6,7 @@ import { Messages } from '../utils/event';
 
 const Lists = styled.ul`
   max-width: 600px;
+  width: 95vw;
   margin: 0 auto 50px;
   display: flex;
   flex-direction: column;
@@ -33,6 +34,7 @@ const Lists = styled.ul`
     span {
       padding: 0.5rem 1rem;
       flex: 1;
+      width: 56%;
       border-left: 1px solid rgba(0, 0, 0, 0.2);
 
       &:first-of-type {
@@ -41,6 +43,10 @@ const Lists = styled.ul`
         border: 0;
         text-align: center;
       }
+    }
+
+    @media (max-width: 340px) {
+      font-size: 0.9em;
     }
   }
 `;

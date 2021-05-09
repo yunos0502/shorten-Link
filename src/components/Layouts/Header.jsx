@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Head = styled.header`
-  width: 300px;
+  width: 80vw;
+  max-width: 300px;
   height: 40px;
   position: relative;
   background: #20b9f1;
